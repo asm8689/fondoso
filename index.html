@@ -43,49 +43,46 @@
                     <div id="item1" class="item">
                         <div class="item-top">
                             <div class="topper">
-                            <!--
-                            
-                            -->
-                            
                                 <h2>Equidad</h2>
-                                <img id="switchImage1" src="trend.png" alt="trend up icon" style="width: 35px; transition: background-color 0.3s ease-in-out;">
+                                <img id="switchImage1" src="pie-chart.png" alt="trend up icon" style="width: 35px; transition: background-color 0.3s ease-in-out;">
                             </div>
-                                <!--
-                                
-                                -->
-                                
                             <p>Administra fácilmente una <em>cap table</em> dináminca y otorga acciones a tus empleados. Realiza cambios al instante y rastrea todos los accionistas.</p>
-                            <a>Explora más</a>
                         </div>
                         <div class="item-bottom">
                             <img src="equity.svg">
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" id="item2">
                         <div class="item-top">
-                            <h2>Levantamiento de capital</h2>
+                            <div class="topper">
+                                <h2>Levantamiento de capital</h2>
+                                <img id=switchImage2 src="peso.png" alt="fundraising icon" style="width: 35px; transition: background-color 0.3s ease-in-out;">
+                            </div>
                             <p>Recauda fondos para tu próxima ronda de inversión, sin importar la etapa. Apoyamos empresas de pre-semilla hasta una <em>OPI</em>.</p>
-                            <a>Empieza hoy</a>
                         </div>
                         <div class="item-bottom">
                             <img src="fundraising.svg">
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" id="item3">
                         <div class="item-top">
-                            <h2>Constitución</h2>
+                            <div class="topper">
+                                <h2>Constitución</h2>
+                                <img id="switchImage3" src="invoice.png" alt="incorporate icon" style="width: 35px; transform: background-color 0.3s ease-in-out;">
+                            </div>
                             <p>Registra legalmente tu empresa con solo unos clics. Constitúyela en México desde cualquier parte del mundo.</p>
-                            <a>Constituir</a>
                         </div>
                         <div class="item-bottom" id="incorporate">
                             <img src="incorporation.svg">
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="item" id="item4">
                         <div class="item-top">
-                            <h2>Modelos Financieros</h2>
+                            <div class="topper">
+                                <h2>Modelos Financieros</h2>
+                                <img id="switchImage4" src="trend.png" alt="modeling icon" style="width: 35px; transform: background-color 0.3s ease-in-out;">
+                            </div>
                             <p>Ahorra miles en gastos legales y modela tu recaudación de fondos. Obtén valoraciones precisas de tu empresa de forma económica y rápida.</p>
-                            <a>Ver un demo</a>
                         </div>
                         <div class="item-bottom">
                             <img src="modeling.svg">
@@ -153,6 +150,19 @@
             const parent1 = document.getElementById('item1');
             const img1 = document.getElementById('switchImage1');
 
+            //img 2
+            const parent2 = document.getElementById('item2');
+            const img2 = document.getElementById('switchImage2');
+
+            //img 3
+            const parent3 = document.getElementById('item3');
+            const img3 = document.getElementById('switchImage3');
+
+            //img 4
+            const parent4 = document.getElementById('item4');
+            const img4 = document.getElementById('switchImage4');
+
+
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 150) {
                     header.classList.add('scrolled');
@@ -169,15 +179,53 @@
                 }
             });
             
+
+            //img 1
             parent1.addEventListener("mouseover", () => {
                 img1.src = "right-up.png";
                 img1.style.backgroundColor = "hsl(160,23%,100%)"
             });
 
             parent1.addEventListener("mouseout", () => {
-                img1.src = "trend.png";
+                img1.src = "pie-chart.png";
                 img1.style.backgroundColor = "transparent";
             });
+
+
+            //img 2
+            parent2.addEventListener("mouseover", () => {
+                img2.src = "right-up.png";
+                img2.style.backgroundColor = "hsl(160,23%,100%)"
+            });
+
+            parent2.addEventListener("mouseout", () => {
+                img2.src = "peso.png";
+                img2.style.backgroundColor = "transparent";
+            });
+
+            //img 3
+            parent3.addEventListener("mouseover", () => {
+                img3.src = "right-up.png";
+                img3.style.backgroundColor = "hsl(160,23%,100%)"
+            });
+
+            parent3.addEventListener("mouseout", () => {
+                img3.src = "invoice.png";
+                img3.style.backgroundColor = "transparent";
+            });
+
+            //img 4
+            parent4.addEventListener("mouseover", () => {
+                img4.src = "right-up.png";
+                img4.style.backgroundColor = "hsl(160,23%,100%)"
+            });
+
+            parent4.addEventListener("mouseout", () => {
+                img4.src = "trend.png";
+                img4.style.backgroundColor = "transparent";
+            });
+
+
         </script>
     </body>
 
