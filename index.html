@@ -40,9 +40,20 @@
             <div class="section-two" id="section-two">
                 <h1 class="tagline">Todo lo que necesitas <br>para lanzar, recaudar y crecer</h1>
                 <div class="gallery">
-                    <div class="item">
+                    <div id="item1" class="item">
                         <div class="item-top">
-                            <h2>Equidad</h2>
+                            <div class="topper">
+                            <!--
+                            
+                            -->
+                            
+                                <h2>Equidad</h2>
+                                <img id="switchImage1" src="trend.png" alt="trend up icon" style="width: 35px; transition: background-color 0.3s ease-in-out;">
+                            </div>
+                                <!--
+                                
+                                -->
+                                
                             <p>Administra fácilmente una <em>cap table</em> dináminca y otorga acciones a tus empleados. Realiza cambios al instante y rastrea todos los accionistas.</p>
                             <a>Explora más</a>
                         </div>
@@ -138,6 +149,10 @@
             const header = document.getElementById('header');
             const nextSection = document.querySelector('.section-two');
 
+            // img 1
+            const parent1 = document.getElementById('item1');
+            const img1 = document.getElementById('switchImage1');
+
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 150) {
                     header.classList.add('scrolled');
@@ -152,6 +167,16 @@
                 } else {
                     header.classList.remove('change-color');
                 }
+            });
+            
+            parent1.addEventListener("mouseover", () => {
+                img1.src = "right-up.png";
+                img1.style.backgroundColor = "hsl(160,23%,100%)"
+            });
+
+            parent1.addEventListener("mouseout", () => {
+                img1.src = "trend.png";
+                img1.style.backgroundColor = "transparent";
             });
         </script>
     </body>
