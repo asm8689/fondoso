@@ -42,7 +42,15 @@
     -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
 
-.header.change-color {
+.h {
+    transition: color 0.3s ease-in-out;
+}
+
+.h.scrolled {
+    color:#1a3732;
+}
+
+.button.change-color {
     color: #1a3732 !important;
 }
 
@@ -405,7 +413,11 @@ header {
     padding-bottom: 25px;
 }
 
-.footer-left, .footer-right {
+.footer-left {
+    width: 40%;
+}
+
+.footer-right {
     width: 50%;
 }
 

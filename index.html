@@ -12,14 +12,14 @@
     <body>
         <header class="header" id="header">
             <div class="left-header">
-                <img src="fondoso_icon_white.png" alt="fondoso icon white">
-                <h1 class="h logo white">fondoso</h1>
+                <img id="logoimg" src="fondoso_icon_white.png" alt="fondoso icon white">
+                <h1 id="header-logo" class="h logo white">fondoso</h1>
             </div>
             <div class="right-header">
-                <button class="h header-button">Productos</button>
-                <button class="h header-button">Recursos</button>
-                <button class="h header-button">Precios</button>
-                <p><a class="h" href="google.com">Iniciar Sesión</a></p>
+                <button id="button1" class="h header-button">Productos</button>
+                <button id="button2" class="h header-button">Recursos</button>
+                <button id="button3" class="h header-button">Precios</button>
+                <p><a id="button4" class="h" href="google.com">Iniciar Sesión</a></p>
                 <button class="yellow-button">Hablar con nosotros</button>
             </div>
         </header>
@@ -144,7 +144,6 @@
         </footer>
         <script>
             const header = document.getElementById('header');
-            const nextSection = document.querySelector('.section-two');
 
             // img 1
             const parent1 = document.getElementById('item1');
@@ -169,18 +168,34 @@
                 } else {
                     header.classList.remove('scrolled');
                 }
+            });
 
-                // Check if the scroll has passed the next section
-                const sectionTop = nextSection.offsetTop;
-                if (window.scrollY > sectionTop - header.offsetHeight) {
-                    header.classList.add('change-color');
+            window.addEventListener("scroll", function () {
+                const button1 = document.getElementById('button1');
+                const button2 = document.getElementById('button2');
+                const button3 = document.getElementById('button3');
+                const button4 = document.getElementById('button4');
+                const logo = document.getElementById('header-logo');
+                const logoimg = document.getElementById('logoimg');
+                if (window.scrollY > 750) {
+                    button1.classList.add("scrolled");
+                    button2.classList.add("scrolled");
+                    button3.classList.add("scrolled");
+                    button4.classList.add("scrolled");
+                    logo.classList.add("scrolled");
+                    logoimg.src = "fondoso-icon-outline-green.png";
                 } else {
-                    header.classList.remove('change-color');
+                    button1.classList.remove("scrolled");
+                    button2.classList.remove("scrolled");
+                    button3.classList.remove("scrolled");
+                    button4.classList.remove("scrolled");
+                    logo.classList.remove("scrolled");
+                    logoimg.src = "fondoso_icon_white.png";
                 }
             });
             
 
-            //img 1
+            //gallery item img 1
             parent1.addEventListener("mouseover", () => {
                 img1.src = "right-up.png";
                 img1.style.backgroundColor = "hsl(160,23%,100%)"
@@ -192,7 +207,7 @@
             });
 
 
-            //img 2
+            //gallery item img 2
             parent2.addEventListener("mouseover", () => {
                 img2.src = "right-up.png";
                 img2.style.backgroundColor = "hsl(160,23%,100%)"
@@ -203,7 +218,7 @@
                 img2.style.backgroundColor = "transparent";
             });
 
-            //img 3
+            //gallery item img 3
             parent3.addEventListener("mouseover", () => {
                 img3.src = "right-up.png";
                 img3.style.backgroundColor = "hsl(160,23%,100%)"
@@ -214,7 +229,7 @@
                 img3.style.backgroundColor = "transparent";
             });
 
-            //img 4
+            //gallery item img 4
             parent4.addEventListener("mouseover", () => {
                 img4.src = "right-up.png";
                 img4.style.backgroundColor = "hsl(160,23%,100%)"
