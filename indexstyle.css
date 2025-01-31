@@ -88,6 +88,10 @@ body {
     font-size: medium;
 }
 
+.header-button:hover {
+    color: #a4afad;
+}
+
 .right-header a {
     color: white;
     text-decoration: none;
