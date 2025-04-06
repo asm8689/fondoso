@@ -1,0 +1,11 @@
+body {
+    margin-top: 25px;
+    margin-left: 150px;
+    margin-right: 25px;
+    margin-bottom: 50px;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
